@@ -6,9 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.1",
+    "ethers": "^5.6.5",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-hot-toast": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.4",
