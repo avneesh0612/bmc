@@ -91,10 +91,10 @@ const CheckoutCard: FC = () => {
 
   if (typeof window !== "undefined") {
     useEffect(() => {
-      if (window.ethereum.networkVersion === "137") {
+      if (window?.ethereum?.networkVersion === "137") {
         setIsPolygon(true);
       }
-    }, [window.ethereum.networkVersion]);
+    }, [window?.ethereum?.networkVersion]);
   }
 
   return (
@@ -217,13 +217,13 @@ const CheckoutCard: FC = () => {
         )}
       </button>
       <button
-        disabled={!currentAccount || window.ethereum.networkVersion !== "137"}
+        disabled={!currentAccount || window?.ethereum?.networkVersion !== "137"}
         onClick={openModal}
         role="link"
         className={`group mt-4 flex w-full items-center justify-center rounded-lg border-2 border-accent bg-transparent px-6 py-3 text-xl font-semibold text-accent transition duration-200 hover:border-accent hover:bg-accent hover:text-black
         ${
           !currentAccount ||
-          (window.ethereum.networkVersion !== "137" &&
+          (window?.ethereum?.networkVersion !== "137" &&
             "cursor-not-allowed opacity-50")
         }`}
       >
