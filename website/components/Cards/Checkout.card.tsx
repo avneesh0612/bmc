@@ -56,7 +56,7 @@ const CheckoutCard: FC = () => {
         const coffeeTxn = await buyMeACoffee.buyCoffee(
           name ? name : "anon",
           message ? message : "Enjoy your coffee!",
-          { value: ethers.utils.parseEther(`${0.5 * amount!}`) }
+          { value: ethers.utils.parseEther(`${1 * amount!}`) }
         );
 
         await coffeeTxn.wait();
@@ -197,7 +197,7 @@ const CheckoutCard: FC = () => {
           </button>
         ))}
       </div>
-      <p className="text-[#E3E3E3]">1 coffee = 0.5 matic</p>
+      <p className="text-[#E3E3E3]">1 coffee = 1 matic</p>
       <button
         onClick={() => {
           currentAccount
