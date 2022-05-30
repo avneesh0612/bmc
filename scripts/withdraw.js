@@ -41,10 +41,7 @@ async function main() {
   // Withdraw funds if there are funds to withdraw.
   if (contractBalance !== "0.0") {
     console.log("withdrawing funds..");
-    bu
-    const withdrawTxn = await buyMeACoffee.withdrawTips({
-      gasPrice: 50000000000000,
-    });
+    const withdrawTxn = await buyMeACoffee.withdrawTips();
     await withdrawTxn.wait();
   } else {
     console.log("no funds to withdraw!");
